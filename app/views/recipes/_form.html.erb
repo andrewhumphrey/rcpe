@@ -1,0 +1,38 @@
+<%= form_for @recipe, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> /Recipe</legend>
+
+    <div class="control-group">
+      <%= f.label :name, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :name, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :rating, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :rating, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :ingredients, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :ingredients, :class => 'text_area' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :method, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :method, :class => 'text_area' %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', recipes_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>
