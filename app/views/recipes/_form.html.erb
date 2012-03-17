@@ -1,6 +1,12 @@
-<%= form_for @recipe, :html => { :class => 'form-horizontal' } do |f| %>
+<%= form_for @recipe, :html => { :multipart => true, :class => 'form-horizontal' } do |f| %>
   <fieldset>
     <legend><%= controller.action_name.capitalize %> /Recipe</legend>
+    <div class="control-group">
+      <%= f.label :main_picture, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.file_field :main_picture %>
+      </div>
+    </div>
 
     <div class="control-group">
       <%= f.label :name, :class => 'control-label' %>

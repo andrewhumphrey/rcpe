@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.1'
 gem 'mysql2'
+gem 'cocaine'
 
 
 # Gems used only for assets and not required

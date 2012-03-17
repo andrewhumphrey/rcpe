@@ -11,15 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120317105112) do
+ActiveRecord::Schema.define(:version => 20120317113420) do
 
   create_table "recipes", :force => true do |t|
     t.string   "name"
-    t.decimal  "rating",      :precision => 10, :scale => 0
+    t.decimal  "rating",                    :precision => 10, :scale => 0
     t.text     "ingredients"
     t.text     "method"
-    t.datetime "created_at",                                 :null => false
-    t.datetime "updated_at",                                 :null => false
+    t.datetime "created_at",                                               :null => false
+    t.datetime "updated_at",                                               :null => false
+    t.string   "main_picture_file_name"
+    t.string   "main_picture_content_type"
+    t.integer  "main_picture_file_size"
+    t.datetime "main_picture_updated_at"
   end
 
 end

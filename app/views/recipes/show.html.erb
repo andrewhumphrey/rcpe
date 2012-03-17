@@ -1,5 +1,7 @@
 <h1>/Recipe</h1>
 
+<%= image_tag @recipe.main_picture.url(:display) %>
+
 <p>
   <b>Name</b><br>
   <%= @recipe.name %>
